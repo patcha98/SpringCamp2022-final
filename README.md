@@ -1,6 +1,6 @@
 # SpringCamp2022-final
 
-Heroku를 사용하여 배포하고있습니다
+index 프론트 페이지는 클론 코딩 하였지만 CRUD 및 아이피 추출 하는 기능은 직접 구현하였습니다. 해당 프로젝트는 Heroku를 사용하여 배포하고있습니다
 
 링크 : https://spring-camp-final.herokuapp.com/
 
