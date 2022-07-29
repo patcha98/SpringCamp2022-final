@@ -63,33 +63,40 @@ public class DownloadController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	
-    	
     	String user_ip = req.getParameter("user_ip");
     	ip = user_ip;
     	dao.save(dl);    
         return "redirect:/viewdownload";//will redirect to viewemp request mapping    
     }    
+    
+    @RequestMapping("/getip")
+    public String getip(Model m, HttpServletRequest req){
+    	
+    	String user_ip = req.getParameter("user_ip2");
+    	ip = user_ip;
+    	
+    	return "redirect:/viewdownload"; 
+    }
+    
+	
     /* It provides list of employees in model object */    
     @RequestMapping("/viewdownload")
     public String viewemp(Model m, HttpServletRequest req){
-    	String user_ip = req.getParameter("user_ip2");
-    	if(user_ip == null) {
-    		user_ip = ip;
-    	}
+  
     	m.addAttribute("key",viewkey);
     	m.addAttribute("downloadURL",downloadURL);
-    	System.out.println(user_ip);
-        List<download> list=dao.getDownloads(user_ip);    
+    	System.out.println(ip);
+        List<download> list=dao.getDownloads(ip);    
         m.addAttribute("list",list);  
         return "viewdownload";    
-    }    
+    }
     /* It displays object data into form for the given id.   
      * The @PathVariable puts URL data into variable.*/    
     @RequestMapping(value="/editdownload/{id}")    
     public String edit(@PathVariable int id, Model m){    
         download dl=dao.getDownloadsById(id);    
         m.addAttribute("command",dl);  
+        
         return "downloadeditform";    
     }    
     /* It updates model object. */    

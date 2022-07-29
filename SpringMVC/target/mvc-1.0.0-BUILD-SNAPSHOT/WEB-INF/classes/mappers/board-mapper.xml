@@ -4,7 +4,7 @@
 	<insert id="save">
 		insert into BHS_DownloadList (yt_link,user_ip,date) values(#{yt_link},#{user_ip},#{date})
 	</insert>
-	<update id="updateBoard">
+	<update id="update">
 		update BHS_DownloadList
 		set yt_link=#{yt_link}, user_ip=#{user_ip}, date=#{date}
 		where id = #{id}

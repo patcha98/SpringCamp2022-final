@@ -7,8 +7,9 @@
 	<update id="update">
 		update BHS_DownloadList
 		set yt_link=#{yt_link}, user_ip=#{user_ip}, date=#{date}
-		where id = #{id}
+		where id=#{id}
 	</update>
+	
 	<delete id="delete">
 		delete from BHS_DownloadList where id=#{id}
 	</delete>
