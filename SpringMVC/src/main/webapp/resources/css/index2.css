@@ -1,0 +1,278 @@
+body, bottom{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+
+}
+
+.nevbar-logo{
+    display: flex;
+    justify-content: center;
+}
+
+li, ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none; 
+    color:inherit;
+}
+
+
+body { 
+    background-color:#F6F6F6;
+    margin: 0;
+}
+
+.head-name{
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+
+.navbar{
+    margin-left: 7%;
+    margin-right: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px; 
+    padding-left: 0;
+}
+
+.navbar .list{
+    font-size: 0;
+}
+
+.navbar .list > li:hover{
+    background: rgb(211, 211, 211);
+    color: rgb(253, 87, 87);
+}
+
+.navbar .list > li{
+    display: inline-block;
+    width: auto;
+    padding: 15px;
+    background:#F6F6F6 ;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.navbar .dropdown2{
+    display:none;
+}
+
+
+
+.navbar .lang:hover > ul {
+    display:block;
+    text-align: left;
+    position: absolute;
+    width: auto;
+    height: auto;
+    color: black;
+    padding: 0;
+    margin-top: 15px;
+    background-color: white;
+    border-color: black;
+    border: 1px solid black;
+    padding-bottom: 8px;
+}
+
+.navbar .lang > ul > li:hover {
+    color: rgb(253, 87, 87);
+    background-color: silver;
+}
+
+
+.navbar .lang > ul > li {
+    margin-top: 5px;
+    width:80px;
+    text-align: center;
+}
+
+.hero-header{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    width: 500px;
+    height: 32px;
+    font-size: 15px;
+    border-color:rgb(253, 70, 70);
+    border-style:solid;
+    border-top-width: thick;
+    border-bottom-width: thick;
+    border-left-width: thick;
+    border-right-width: thick;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    margin-left: 10%;
+}
+
+
+.submit-button{
+    color: white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+    width: 100px;
+    height: 62px;
+    background: rgb(253, 70, 70);
+    list-style: none;
+    margin-right: 10%;
+}
+.line{
+    margin-top: 7%;
+    margin-bottom: 7%;
+    width: 90%;
+}
+
+.explain-1{
+    display: flex;
+    align-items : center;
+    justify-content: center;
+}
+.convert-text{
+    display: block;
+    width: 450px;
+    text-align: left;
+}
+
+
+main { 
+    border-style:solid;
+    border-width: thin;
+    border-color:rgb(122, 122, 122);
+    clear: both;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color:white;
+    text-align: center;
+}
+
+bottom {
+    text-align: center;
+
+}
+
+.explain-2 {
+
+    display:flex;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explain-2 > div {
+    width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.explain-2 > div > p{
+    max-width: 500px;
+    width: auto;
+}
+
+.explain-3 {
+
+    display:flex;
+    justify-content : center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explain-3 > div {
+    width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.explain-3 > div > p{
+    max-width: 500px;
+    width: auto;
+}
+
+bottom h2 
+{
+    position:relative;
+    color: rgb(208, 77, 77);
+}
+
+footer{
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+footer hr{
+    margin-bottom: 50px;
+}
+
+
+footer > div > ul{
+
+    text-align: center;
+    padding-left:0;
+}
+
+footer > div > ul > li{
+    display: inline-block;
+}
+
+footer > div > ul > li:hover{
+    color: rgb(253, 70, 70);
+}
+
+.list-button{
+	background: rgb(253, 70, 70);
+	color:white; padding : 10px;
+	border-radius: 10px;
+}
+
+.list-button:hover{
+	background: rgb(255, 35, 35);
+}
+
+.aside {
+        position:fixed; 
+        width: 100px;
+        display:inline-block;
+        right:50px;
+        height: 100px; 
+        top: 85%;
+        background-color: transparent;
+        margin:0;
+        box-shadow:3px 3px 3px 3px gray;
+}
+
+.download-list{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 30px;
+}
+
+input:focus {outline:none;}
+
+.submit-button:hover{
+    background: rgb(255, 35, 35);
+}

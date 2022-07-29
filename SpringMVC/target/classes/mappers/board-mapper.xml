@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Download">
+	<insert id="save">
+		insert into BHS_DownloadList (yt_link,user_ip,date) values(#{yt_link},#{user_ip},#{date})
+	</insert>
+	<update id="updateBoard">
+		update BHS_DownloadList
+		set yt_link=#{yt_link}, user_ip=#{user_ip}, date=#{date}
+		where id = #{id}
+	</update>
+	<delete id="delete">
+		delete from BHS_DownloadList where id=#{id}
+	</delete>
+	<select id="getDownloadsById" resultType="download">
+		select * from BHS_DownloadList where id=#{id}
+	</select>
+	<select id="getDownloads" resultType="download">
+		select * from BHS_DownloadList where user_ip = #{user_ip} order by id desc
+	</select>
+</mapper>

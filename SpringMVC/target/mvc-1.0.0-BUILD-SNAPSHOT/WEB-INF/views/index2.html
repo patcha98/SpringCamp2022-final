@@ -1,0 +1,170 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube에서 비디오 및 오디오 다운로드!</title>
+
+    <link href="resources/css/index2.css" rel="stylesheet" type="text/css">
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        async function getIpClient() {
+          try {
+            response = await axios.get('https://api.ipify.org?format=json');
+            var ip = response.data.ip;
+            document.getElementById("user_ip").value = ip;
+            document.getElementById("search-form").submit();
+          } catch (error) {
+            console.error(error);
+          }
+        }
+        
+        async function getIpClient2() {
+            try {
+              response = await axios.get('https://api.ipify.org?format=json');
+              var ip = response.data.ip;
+              document.getElementById("user_ip2").value = ip;
+              document.getElementById("list-form").submit();
+            } catch (error) {
+              console.error(error);
+            }
+          }
+    </script>
+</head>
+    <body style="margin: 0 auto;">
+        <header></header>
+        
+        <nav class="navbar">
+            <div class="nevbar-logo">
+                <img height="46px" width="46px" src="../img/logo.png" alt="YoutubeDownloader Logo">
+                <a style="margin-top: 8px;" class="head-name" href="http://p21800333.dothome.co.kr">YoutubeDownloader</a>
+            </div>
+            
+            <ul class="list">
+                <li>
+                    <a href="../img/hunseong.png">Youtube Downloader</a>
+                </li>
+                <li>
+                    <a href="../img/hunseong.png">Youtube Converter</a>
+                </li>
+                <li>
+                    <a href="../img/hunseong.png">Youtube MP3 Converter</a>
+                </li>
+                <li class="lang" style="width: 80px;">
+                    <a href="../img/hunseong.png">한국어</a>
+                    <ul class="dropdown2">
+                        <li><a href="영어번역페이지">English</a></li>
+                        <li><a href="일본어어번역페이지">日本語</a></li>
+                        <li><a href="한국어번역페이지">한국어</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+        
+        <main style="border-radius: 5px;" >
+            <div class="search-body">
+                    <h1 class="hero-header">Youtube에서 비디오 및 오디오 다운로드</h1>
+                    <div>
+                        <form class="search" action="save" method="post" id="search-form">
+                            <input class="search-box" path="yt_link" id="txt-url" name="yt_link" type="text" placeholder="여기에 링크를 넣어주세요!!" autocomplete="off">
+                            <input class="user_ip" path="user_ip" id="user_ip" name="user_ip" style="display:none;">
+                            <button type="button" value="Start" id="submit-button" class="submit-button" name="submit-button" onClick="getIpClient();">Strat →</button>
+                        </form>
+
+                        
+                        
+                        <p class="small" style="margin-top: 15px;">"이 서비스를 이용함으로서 해당 사항에 동의합니다."<a class="active" href="서비스링크" target="_blank" style="color: blue;">이용약관</a>.</p>
+                        
+                        <hr class="line">
+                        <div class="explain-1" >
+                            <div>
+                                <p style=" width: auto; text-align: left; font-size: 20px; margin-left: 5%">유튜브 비디오를 변환하는 방법?</p>
+                                <p class=" convert-text" style=" width: auto; margin-right: 5%; margin-left: 5%;">
+                                    1. 유튜브 url을 붙여 넣거나 검색 창에 키워드를 입력하세요.<br><br>
+                                    2. 귀하가 변환하려는 출력 형식을 선택하세요.<br><br>
+                                    3. 변환이 완료 될 때까지 기다렸다가 파일을 다운로드하세요. 매우 쉽고 빠릅니다.<br><br>
+                                </p>
+                            </div>
+                            
+
+                            <img style="margin-left: auto; margin-right: 5%" width="auto" height="200px" src="../img/hunseong.png" alt="explain">
+                        </div> 
+                    </div>
+                    <hr class="line">
+                    <h1>내가 다운받은 리스트</h1>
+                    <div class="download-list" style="margin-bottom:30px">
+                        <p>안녕하세요 유저님께서 다운로드 받은 영상 리스트를 확인하는 페이지로 이동하는 버튼입니다.</p>
+                        <form class="list" action="viewdownload" method="post" id="list-form">
+                        	<input class="user_ip2" id="user_ip2" name="user_ip2" style="display:none;">
+                        	<button class="list-button" type="button" onClick="getIpClient2();">받은 리스트 모두 확인하기</button>
+
+                        </form>
+						
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <bottom>
+            <h1>최고의 유튜브 변환기</h1>
+            <p style="width: auto; text-align: center; margin-left: 10%; margin-right: 10%;">우리의 유튜브 변환기를 사용하면 귀하는 지금 유튜브 비디오를 오디오 (M4A, MP3, WAV, AAC, OGG, WMA, FLAC) 또는 비디오 (AVI, MP4, MPG, MOV, WMV, KMV, M4V, WEBM, FLV, 3GP) 파일로 쉽게 변환하고 무료로 그것들을 다운로드 할 수 있습니다. 유튜브 변환기는 모든 기기 (컴퓨터, 태블릿 및 모바일) 및 모든 운영체제 (윈도우즈, 맥, 리눅스, 안드로이드, iOS...)와 완벽하게 호환됩니다. 우리의 유튜브 변환기는 무료이며, 소프트웨어 또는 등록을 필요로하지 않습니다.</p>
+            <br>
+            <hr style="width: 800px;">
+            <br>
+            <div class="explain-2" >
+                <div>
+                    <img width="100px" height="100px" src="../img/star.png" alt="star">
+                    <h2>모든 기능 무료</h2>
+                    <p>우리의 서비스는 누구에게나 무료입니다. 그것은 누구나 유튜브 비디오를 변환하고 다운로드하는 데 사용할 수 있습니다.</p>
+                </div>
+                <div>
+                    <img width="100px" height="100px" src="../img/like.webp" alt="like">
+                    <h2>손쉬운 변환</h2>
+                    <p>그냥 링크를 붙여 넣거나 검색하여 변환 할 비디오를 선택하고 귀하의 장치로 비디오를 다운로드 할 준비를하세요.</p>
+                </div>
+            </div>
+
+            <div class="explain-3" style="margin-top: 40px;">
+                <div style="width: auto;">
+                    <img width="100px" height="100px" src="../img/Tools.png" alt="Tool">
+                    <h2>모든 파일 형식 지원</h2>
+                    <p>모든 비디오 및 오디오 포맷 변환을 지원합니다. 유튜브 비디오를 MP3, 3GP, MP4, FLV, AVI 형식 등으로 쉽게 변환합니다.</p>
+                </div>
+                <div style="width: auto;">
+                    <img width="100px" height="100px" src="../img/down.webp" alt="down">
+                    <h2>초고속 다운로드</h2>
+                    <p>우리의 유튜브 변환기는 변환과 다운로드를위한 최고의 속도를 가집니다.</p>
+                </div>
+            </div>
+        </bottom>
+        
+        <footer>
+            <hr>
+            <p>@2022 p21800333.dothome.co.kr</p>
+            <div>
+                <ul>
+                    <li><a href="">about</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Privacy Pollicy</a></li>
+                </ul>
+            </div>
+
+            
+            
+        </footer>
+
+        
+    </body>
+    
+    <div class="aside"><a href="http://p21800333.dothome.co.kr/"><img height="100" width="100" src="../img/scroll.png" alt="scroll"></a></div>
+
+
+
+</html>
